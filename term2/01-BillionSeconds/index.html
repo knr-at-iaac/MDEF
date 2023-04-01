@@ -1,0 +1,750 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="reflections on and documentation of my mdef journey">
+      
+      
+        <meta name="author" content="knr-at-iaac">
+      
+      
+        <link rel="canonical" href="https://knr-at-iaac.github.io/MDEF/term2/01-BillionSeconds/">
+      
+      
+        <link rel="prev" href="../03-DStudioTerm2/">
+      
+      
+        <link rel="next" href="../02-remixMaterials/">
+      
+      <link rel="icon" href="../../assets/images/yellowSquare.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>Designing for the next billion seconds - knr_at_iaac - documenting my mdef</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,300i,400,400i,700,700i%7CSilkscreen:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Work Sans";--md-code-font:"Silkscreen"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#designing-for-the-next-billion-seconds" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="knr_at_iaac - documenting my mdef" class="md-header__button md-logo" aria-label="knr_at_iaac - documenting my mdef" data-md-component="logo">
+      
+  <img src="../../assets/images/yellowSquare.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            knr_at_iaac - documenting my mdef
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Designing for the next billion seconds
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="knr_at_iaac - documenting my mdef" class="md-nav__button md-logo" aria-label="knr_at_iaac - documenting my mdef" data-md-component="logo">
+      
+  <img src="../../assets/images/yellowSquare.png" alt="logo">
+
+    </a>
+    knr_at_iaac - documenting my mdef
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Reflections
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Reflections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Term 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Term 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-DStudioTerm2/" class="md-nav__link">
+        Design studio class term two
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Designing for the next billion seconds
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Designing for the next billion seconds
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-story-a-day-in-my-post-tech-life" class="md-nav__link">
+    the story (a day in my post-tech life)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-letter" class="md-nav__link">
+    the letter
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-remixMaterials/" class="md-nav__link">
+        Remixing materials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-MakingSense/" class="md-nav__link">
+        Making sense and meaning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Communication/" class="md-nav__link">
+        Communicating ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Measuring/" class="md-nav__link">
+        Measuring the world
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Term 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Term 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/01-Bootcamp/" class="md-nav__link">
+        Bootcamp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/02-Atlas%20of%20Weak%20Signals/" class="md-nav__link">
+        AoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/03-Bio%26Agro_Zero/" class="md-nav__link">
+        Bio & Agro Zero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/04-DesignStudio/" class="md-nav__link">
+        Design Studio (class)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/05-Living%20with%20your%20own%20ideas/" class="md-nav__link">
+        Living with your own ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/06-TechMyth/" class="md-nav__link">
+        Tech beyond the myth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/07-CommunityEngagement/" class="md-nav__link">
+        Community Engagement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/08-Extended%20Intelligences/" class="md-nav__link">
+        Extended Intelligences
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Master project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Master project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project/" class="md-nav__link">
+        Initial ideas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/me/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-story-a-day-in-my-post-tech-life" class="md-nav__link">
+    the story (a day in my post-tech life)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-letter" class="md-nav__link">
+    the letter
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="designing-for-the-next-billion-seconds">Designing for the next billion seconds<a class="headerlink" href="#designing-for-the-next-billion-seconds" title="Permanent link">&para;</a></h1>
+<p>&ldquo;Yes, I know that Mr. 2054 has a billion seconds left to his name, and you only have 10&lsquo;000. But he just worked about 100&lsquo;000 times harder than you, so it&rsquo;s perfectly fair.&rdquo;
+- The mother of Mrs Two-hours-and-fourty-six-minutes-from-now explaining inequality to her daughter</p>
+<p>This course was an almost pychedelic ride through the intricacies of what reality looks like when you realise that many assumptions you might have are bullshit, and the possible futures  such a perspective opens up. It was to both re-frame the present and to facilitate story-based speculation about (relatively hopeful) possible futures.</p>
+<p>Even if it was enjoyable, the first part was something that felt less novel to me, having engaged in many assumption-questioning practices throughout the years. The second part, on the other hand was new to me - at least in practice. I had often thought about writing speculative fiction, but I never got around to it. I&rsquo;m glad this course gave me an &lsquo;excuse&rsquo; to do so. Though the texts I wrote for this course are relatively short, I think they may have broken the spell of the blank page (for this particular genre).</p>
+<p>The course also made the connection between storytelling, cultural influence, and practice clearer in my mind. Though we talked about solar-centered design, the term &lsquo;solarpunk&rsquo; was not mentioned in the course (as far as I remember). However, the whole experience seems related to that genre of speculative fiction. Right after the course, I listened to a few podcasts about solarpunk which also featured a connection to design and other concrete practices. The result is a new-found interest and appreciation of this kind of storytelling connected to practice, which I will explore further (e.g. at a conference in the spring, to which I will likely apply - that also features the same kind of combination).</p>
+<p>In addition to a collective presentation, we wrote two texts individually as part of this course. The first was about our day in a billion seconds from now. We were encouraged to imagine a relatively hopeful future. Our guide for this exploration were a number of prompts, e.g. to imagine what&rsquo;s different about work, or waking up, etc (one prompt response per slide). </p>
+<p>The next section is an adapted version of my presentation (in the form of a more or less coherent text). </p>
+<h2 id="the-story-a-day-in-my-post-tech-life">the story (a day in my post-tech life)<a class="headerlink" href="#the-story-a-day-in-my-post-tech-life" title="Permanent link">&para;</a></h2>
+<p><em>It&rsquo;s 2054. I&rsquo;m a fresh-faced 58-year old, moving between various housing arrangements partly owned by a digital cooperative. Some are semi-private (for example if they used to belong to a member of the organisation). Today, I wake up in Barcelona. It&rsquo;s rather hot and dry (45 degrees Celsius, 50% humidity).</em></p>
+<p><em>I wake up around 9:00, slightly hungover. For old time’s sake I went for plain old ethyl alcohol instead of the much less harsh bioengineered alternative, ambydamby (I met an old friend yesterday).</em></p>
+<p><em>A music box powered by my roommate’s teenage kid wakes me up. He’s playing a hi/lo tech VR game (low res e-ink, a bike powering the box), the sound encoded in laser cut scraps of a hydrogen tank - a DIY/O project by my temporary roommates, some of whom live here more permanently, and thereby have more of a sense of ownership over the place. On the night table, a green LED signals that the fermentation process of my custom psychbucha is ready - today I need to focus.</em></p>
+<p><em>I pluck a mushroom growing from the kitchen shelf&rsquo;s exterior walls, mix it with a spicy mix I pre-made, add olive oil and a quarter liter of lab-grown eggs (from the building’s cellar), heat it, and eat it. Then I drink half a liter infusion of ephedra from the balcony.</em></p>
+<p><em>The headlines are: “New proposal round for Raval micro-governance starts today -
+check your vetos”; “Police tanks torched in Denmark as population pushes for alignment with global autonomy standards”; “Part of NYC Big Wall bursts, leaving five water containment districts submerged”.</em></p>
+<p><em>I get on my bike, ride 5 min to the bikecellaria (a kind of parralel monorail for
+bikes). Six minutes later I’m on a hydrogen-powered airship run by the city, which brings me to one of the neighbouring rural hubs.</em></p>
+<p><em>I arrive at the semi-automated permaculture farm and go exercise by picking some fruit (I get to keep 10% of them). Around the corner is a distributed production facility. I booked a slot there. I promised to co-produce a custom medical device for one of my mutual health networks today. As I arrive, the material costs are immediatly cleared through a privacy-enhanced mutual credit currency, as my low power hardware wallet connects to the rural hub meshnet - one of the farmers has a friend of a friend who owes one of my best friends a favour (who, in turn, owes me fifteen ambydamby brews).</em></p>
+<p><em>At lunch, I eat three dates I collected at the farm with a coffee. I still don&rsquo;t like eating lunch.</em></p>
+<p><em>Later, I go to a grey market equipment provider. Some things still need to be bought in the traditional sense. I’m planning on taking a trip to an authco (a region where authoritatian norms are dominant) located in North America next month. I run a niche newsletter on christian extremists and their culinary habits. No way I’m going there without a plate carrier; these are not socially accepted in Barcelona, so I need to get it under the table (with artificially scarce currency).</em></p>
+<p><em>After buying my ‘traveling equipment’, I decide to meet a friend in a dance bar. Everywhere around us are ambydamby tanks (final fermentation happening semi-automatically directly in the bar). Everything is self-service, since most guests are part owners of the bar. I ignore a student on ‘moderation duty’ trying to nudge me into being nicer to my friend and asking me if I’m not drinking more than what I planned. This place isn’t what it used to be. In my 40s’ these students used to be useful for security, but now that they have less to do they’re becoming increasingly annoying. Three tables further, closer to the music, young people are having a small orgy.</em></p>
+<p><em>As I try to sleep, my thoughts hover around a friend who’s taking an ‘active trip’ to a fascist authco. To calm my nerves, I start planning a small prodfestival in the mountains in my head, for when he comes back - building rube goldberg drug paraphenalia in a combination of distributed automated manufacturing and diy/o remixing. Then, I dip my scalp into a bowl of hair growth mutagens. I think I might put some hormone-producing yeast to ferment so I have something to take for tomorrow night’s queer party.</em></p>
+<p><em>To calm my nerves, I read through some texts I had on my reading list:
+- an AI generated complexity science article analysing potential points of intervention in north american authcos
+- a recipe for growing and building an h-bike mod</em></p>
+<p><em>If I had three extra hours in this day, I wouldn’t sleep and instead go print some flyers; I would get on a super old, hacked self-flying former insecticide spraying airplane with a few friends, get ambydamby&rsquo;d and drop the flyers on an authco.</em></p>
+<h2 id="the-letter">the letter<a class="headerlink" href="#the-letter" title="Permanent link">&para;</a></h2>
+<p>Another text we wrote as part of this course was a letter written as our future self to our past self (us, now). The idea was that we would share some information about how we got to the future we described in the earlier story (at least, that&rsquo;s how I interpreted it). </p>
+<p>Here is a scan of the letter I wrote in the future, adressed to myself now:  <a href="../../assets/files/billionSecsLetter.pdf">pdf</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft 2021 "knr-at-iaac" - GNU Free Documentation License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
