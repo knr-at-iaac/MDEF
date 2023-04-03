@@ -1,0 +1,1265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="reflections on and documentation of my mdef journey">
+      
+      
+        <meta name="author" content="knr-at-iaac">
+      
+      
+        <link rel="canonical" href="https://knr-at-iaac.github.io/MDEF/term2/07-prototypingDesign/">
+      
+      
+        <link rel="prev" href="../06-Measuring/">
+      
+      
+        <link rel="next" href="../../term1/01-Bootcamp/">
+      
+      <link rel="icon" href="../../assets/images/yellowSquare.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
+    
+    
+      
+        <title>Digital prototyping for design - knr_at_iaac - documenting my mdef</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,300i,400,400i,700,700i%7CSilkscreen:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Work Sans";--md-code-font:"Silkscreen"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-prototyping-for-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="knr_at_iaac - documenting my mdef" class="md-header__button md-logo" aria-label="knr_at_iaac - documenting my mdef" data-md-component="logo">
+      
+  <img src="../../assets/images/yellowSquare.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            knr_at_iaac - documenting my mdef
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital prototyping for design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="knr_at_iaac - documenting my mdef" class="md-nav__button md-logo" aria-label="knr_at_iaac - documenting my mdef" data-md-component="logo">
+      
+  <img src="../../assets/images/yellowSquare.png" alt="logo">
+
+    </a>
+    knr_at_iaac - documenting my mdef
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Reflections
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Reflections
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Term 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Term 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-DStudioTerm2/" class="md-nav__link">
+        Design studio class term two
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-BillionSeconds/" class="md-nav__link">
+        Designing for the next billion seconds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-remixMaterials/" class="md-nav__link">
+        Remixing materials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-MakingSense/" class="md-nav__link">
+        Making sense and meaning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Communication/" class="md-nav__link">
+        Communicating ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Measuring/" class="md-nav__link">
+        Measuring the world
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Digital prototyping for design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Digital prototyping for design
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-thoughts-after-the-first-few-days" class="md-nav__link">
+    initial thoughts (after the first few days)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-open-source-and-rocknroll-day-1" class="md-nav__link">
+    coding, open source, and rock'n'roll - day 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criss-crossing-croissant-curves-day-2" class="md-nav__link">
+    criss-crossing croissant curves - day 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laser-focused-day-3" class="md-nav__link">
+    laser focused - day 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bedding-for-your-bidding-day-4" class="md-nav__link">
+    bedding for your bidding - day 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-challenge-sens_hort-water-sensing-for-urban-horticulture" class="md-nav__link">
+    first challenge - sens_hort, water sensing for urban horticulture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-rise-for-the-3dp-national-anthem-day-5" class="md-nav__link">
+    All rise for the 3DP national anthem- day 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking-entirely-unlike-having-drinks-with-your-more-successful-cousin-day-6" class="md-nav__link">
+    networking entirely unlike having drinks with your more successful cousin - day 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-with-the-lights-on-day-7" class="md-nav__link">
+    make with the lights on - day 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collets-not-bullets-day-8" class="md-nav__link">
+    collets not bullets - day 8
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Term 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Term 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/01-Bootcamp/" class="md-nav__link">
+        Bootcamp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/02-Atlas%20of%20Weak%20Signals/" class="md-nav__link">
+        AoWS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/03-Bio%26Agro_Zero/" class="md-nav__link">
+        Bio & Agro Zero
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/04-DesignStudio/" class="md-nav__link">
+        Design Studio (class)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/05-Living%20with%20your%20own%20ideas/" class="md-nav__link">
+        Living with your own ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/06-TechMyth/" class="md-nav__link">
+        Tech beyond the myth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/07-CommunityEngagement/" class="md-nav__link">
+        Community Engagement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../term1/08-Extended%20Intelligences/" class="md-nav__link">
+        Extended Intelligences
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Master project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Master project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/project/" class="md-nav__link">
+        Initial ideas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/me/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initial-thoughts-after-the-first-few-days" class="md-nav__link">
+    initial thoughts (after the first few days)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-open-source-and-rocknroll-day-1" class="md-nav__link">
+    coding, open source, and rock'n'roll - day 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criss-crossing-croissant-curves-day-2" class="md-nav__link">
+    criss-crossing croissant curves - day 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laser-focused-day-3" class="md-nav__link">
+    laser focused - day 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bedding-for-your-bidding-day-4" class="md-nav__link">
+    bedding for your bidding - day 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-challenge-sens_hort-water-sensing-for-urban-horticulture" class="md-nav__link">
+    first challenge - sens_hort, water sensing for urban horticulture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-rise-for-the-3dp-national-anthem-day-5" class="md-nav__link">
+    All rise for the 3DP national anthem- day 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking-entirely-unlike-having-drinks-with-your-more-successful-cousin-day-6" class="md-nav__link">
+    networking entirely unlike having drinks with your more successful cousin - day 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-with-the-lights-on-day-7" class="md-nav__link">
+    make with the lights on - day 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collets-not-bullets-day-8" class="md-nav__link">
+    collets not bullets - day 8
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="digital-prototyping-for-design">Digital prototyping for design<a class="headerlink" href="#digital-prototyping-for-design" title="Permanent link">&para;</a></h1>
+<p>&ldquo;Everything in life has a datasheet. If it doesn&rsquo;t have a datasheet, don&rsquo;t trust it.&rdquo; - Eduardo</p>
+<p>&ldquo;Sure, I&rsquo;ll come up for a cup of tea.&rdquo; - Me, having had &ldquo;a really nice time tonight&rdquo;, trusting something without a datasheet.</p>
+<h2 id="initial-thoughts-after-the-first-few-days">initial thoughts (after the first few days)<a class="headerlink" href="#initial-thoughts-after-the-first-few-days" title="Permanent link">&para;</a></h2>
+<p>This course is designed to teach skills that I&rsquo;m especially interested in developing: designing, prototyping, and iterating things and systems using digital design tools (2D/3D modeling for automated distributed manufacturing, open source electronics for rapid prototyping of IoT and other devices). Given my non-design background and limited modeling experience, this course is an opportunity for me to learn some of those skills. I&rsquo;ve also read quite a bit, and played a little bit, with many of the technologies concerned, but in a way which was usually not in-depth enough to make an actual project out of it. At this point in the course, I have already learned some of the technical details and methods involved. I&rsquo;m excited for the hands-on sprints, which will - I hope - force me to go more in depth while learning methods for relatively structured prototyping. </p>
+<h2 id="coding-open-source-and-rocknroll-day-1">coding, open source, and rock&rsquo;n&rsquo;roll - day 1<a class="headerlink" href="#coding-open-source-and-rocknroll-day-1" title="Permanent link">&para;</a></h2>
+<p>As is typical for a class with Victor (which I always enjoy a lot), this day was about understanding and using open hardware electronics, coding, and the value of open knowledge.</p>
+<p>I enjoyed the digression on the damage patents can and have wreck(ed). I hope to learn more about the negatives of that approach, alternatives, and mitigation strategies in upcoming sessions.</p>
+<p>Other than that, being relatively familiar with the basics of programming, I especially focused on the parts on electronics, and learning the very concrete aspects of using an Arduino. It is somewhat disheartening to me that it took a formal Master&rsquo;s to really commit to learning about using such devices (despite having them available at home previously). I obviously have not &lsquo;killed the bureaucrat in my head&rsquo; thoroughly enough up to now. However, some structure,and - much more importantly - having people around to collaborate and to share the experience with really helps. This course in particular, and MDEF in general, have really reinforced my belief that doing things together (or at least next to each other) is in most cases preferable to doing them alone.</p>
+<p>As a playful exploration of programming Arduinos, we were asked to connect a buzzer and make it play some kind of music.</p>
+<p>Here is what I came up with (together with my roommate, Myrto):</p>
+<p>(the font will be - uh - fixed in a later update of this post&hellip;)</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/* </span>
+<span class="cm"> based on: Ode to Joy - Beethoven&#39;s Symphony No. 9 </span>
+<span class="cm">  Connect a piezo buzzer or speaker to pin 11 or select a new pin.</span>
+<span class="cm">  More songs available at https://github.com/robsoncouto/arduino-songs                                            </span>
+
+<span class="cm">                                              Robson Couto, 2019</span>
+
+<span class="cm">  adapted by korbi and myrto february 2023. Added a increasing randomness / generative variation on the ode</span>
+<span class="cm">*/</span>
+
+<span class="cp">#define NOTE_B0  31</span>
+<span class="cp">#define NOTE_C1  33</span>
+<span class="cp">#define NOTE_CS1 35</span>
+<span class="cp">#define NOTE_D1  37</span>
+<span class="cp">#define NOTE_DS1 39</span>
+<span class="cp">#define NOTE_E1  41</span>
+<span class="cp">#define NOTE_F1  44</span>
+<span class="cp">#define NOTE_FS1 46</span>
+<span class="cp">#define NOTE_G1  49</span>
+<span class="cp">#define NOTE_GS1 52</span>
+<span class="cp">#define NOTE_A1  55</span>
+<span class="cp">#define NOTE_AS1 58</span>
+<span class="cp">#define NOTE_B1  62</span>
+<span class="cp">#define NOTE_C2  65</span>
+<span class="cp">#define NOTE_CS2 69</span>
+<span class="cp">#define NOTE_D2  73</span>
+<span class="cp">#define NOTE_DS2 78</span>
+<span class="cp">#define NOTE_E2  82</span>
+<span class="cp">#define NOTE_F2  87</span>
+<span class="cp">#define NOTE_FS2 93</span>
+<span class="cp">#define NOTE_G2  98</span>
+<span class="cp">#define NOTE_GS2 104</span>
+<span class="cp">#define NOTE_A2  110</span>
+<span class="cp">#define NOTE_AS2 117</span>
+<span class="cp">#define NOTE_B2  123</span>
+<span class="cp">#define NOTE_C3  131</span>
+<span class="cp">#define NOTE_CS3 139</span>
+<span class="cp">#define NOTE_D3  147</span>
+<span class="cp">#define NOTE_DS3 156</span>
+<span class="cp">#define NOTE_E3  165</span>
+<span class="cp">#define NOTE_F3  175</span>
+<span class="cp">#define NOTE_FS3 185</span>
+<span class="cp">#define NOTE_G3  196</span>
+<span class="cp">#define NOTE_GS3 208</span>
+<span class="cp">#define NOTE_A3  220</span>
+<span class="cp">#define NOTE_AS3 233</span>
+<span class="cp">#define NOTE_B3  247</span>
+<span class="cp">#define NOTE_C4  262</span>
+<span class="cp">#define NOTE_CS4 277</span>
+<span class="cp">#define NOTE_D4  294</span>
+<span class="cp">#define NOTE_DS4 311</span>
+<span class="cp">#define NOTE_E4  330</span>
+<span class="cp">#define NOTE_F4  349</span>
+<span class="cp">#define NOTE_FS4 370</span>
+<span class="cp">#define NOTE_G4  392</span>
+<span class="cp">#define NOTE_GS4 415</span>
+<span class="cp">#define NOTE_A4  440</span>
+<span class="cp">#define NOTE_AS4 466</span>
+<span class="cp">#define NOTE_B4  494</span>
+<span class="cp">#define NOTE_C5  523</span>
+<span class="cp">#define NOTE_CS5 554</span>
+<span class="cp">#define NOTE_D5  587</span>
+<span class="cp">#define NOTE_DS5 622</span>
+<span class="cp">#define NOTE_E5  659</span>
+<span class="cp">#define NOTE_F5  698</span>
+<span class="cp">#define NOTE_FS5 740</span>
+<span class="cp">#define NOTE_G5  784</span>
+<span class="cp">#define NOTE_GS5 831</span>
+<span class="cp">#define NOTE_A5  880</span>
+<span class="cp">#define NOTE_AS5 932</span>
+<span class="cp">#define NOTE_B5  988</span>
+<span class="cp">#define NOTE_C6  1047</span>
+<span class="cp">#define NOTE_CS6 1109</span>
+<span class="cp">#define NOTE_D6  1175</span>
+<span class="cp">#define NOTE_DS6 1245</span>
+<span class="cp">#define NOTE_E6  1319</span>
+<span class="cp">#define NOTE_F6  1397</span>
+<span class="cp">#define NOTE_FS6 1480</span>
+<span class="cp">#define NOTE_G6  1568</span>
+<span class="cp">#define NOTE_GS6 1661</span>
+<span class="cp">#define NOTE_A6  1760</span>
+<span class="cp">#define NOTE_AS6 1865</span>
+<span class="cp">#define NOTE_B6  1976</span>
+<span class="cp">#define NOTE_C7  2093</span>
+<span class="cp">#define NOTE_CS7 2217</span>
+<span class="cp">#define NOTE_D7  2349</span>
+<span class="cp">#define NOTE_DS7 2489</span>
+<span class="cp">#define NOTE_E7  2637</span>
+<span class="cp">#define NOTE_F7  2794</span>
+<span class="cp">#define NOTE_FS7 2960</span>
+<span class="cp">#define NOTE_G7  3136</span>
+<span class="cp">#define NOTE_GS7 3322</span>
+<span class="cp">#define NOTE_A7  3520</span>
+<span class="cp">#define NOTE_AS7 3729</span>
+<span class="cp">#define NOTE_B7  3951</span>
+<span class="cp">#define NOTE_C8  4186</span>
+<span class="cp">#define NOTE_CS8 4435</span>
+<span class="cp">#define NOTE_D8  4699</span>
+<span class="cp">#define NOTE_DS8 4978</span>
+<span class="cp">#define REST 0</span>
+
+
+
+<span class="c1">// change this to whichever pin you want to use</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">buzzer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+
+<span class="c1">// notes of the melody followed by the duration.</span>
+<span class="c1">// a 4 means a quarter note, 8 an eighteenth , 16 sixteenth, so on</span>
+<span class="c1">// !!negative numbers are used to represent dotted notes,</span>
+<span class="c1">// so -4 means a dotted quarter note, that is, a quarter plus an eighteenth!!</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">melody</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+
+
+<span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">-4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">-4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_G3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_G4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_F4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_E4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NOTE_D4</span><span class="p">,</span><span class="mi">-4</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="w">  </span><span class="n">NOTE_C4</span><span class="p">,</span><span class="mi">2</span>
+
+<span class="p">};</span>
+
+
+
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="nf">randomSeed</span><span class="p">(</span><span class="nf">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+
+
+<span class="p">}</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="c1">//randomSeed(analogRead(A12));</span>
+
+<span class="kr">long</span><span class="w"> </span><span class="n">randNumber</span><span class="p">;</span>
+
+
+<span class="c1">//delay(1000);</span>
+
+<span class="c1">// change this to make the song slower or faster</span>
+<span class="c1">//int tempo= randNumber*7; </span>
+<span class="kr">int</span><span class="w"> </span><span class="n">tempo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+
+<span class="c1">// sizeof gives the number of bytes, each int value is composed of two bytes (16 bits)</span>
+<span class="c1">// there are two values per note (pitch and duration), so for each note there are four bytes</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">notes</span><span class="o">=</span><span class="kr">sizeof</span><span class="p">(</span><span class="n">melody</span><span class="p">)</span><span class="o">/</span><span class="kr">sizeof</span><span class="p">(</span><span class="n">melody</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span>
+
+<span class="c1">//calculating a random number b</span>
+
+<span class="c1">// this calculates the duration of a whole note in ms (60s/tempo)*4 beats</span>
+<span class="kr">int</span><span class="w"> </span><span class="n">wholenote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">60000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tempo</span><span class="p">;</span>
+
+<span class="kr">int</span><span class="w"> </span><span class="n">divider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">noteDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+
+<span class="c1">//a variable for a random number</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">thisNote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">thisNote</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">notes</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">thisNote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thisNote</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// calculates the duration of each note</span>
+<span class="w">    </span><span class="n">divider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">melody</span><span class="p">[</span><span class="n">thisNote</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">divider</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// regular note, just proceed</span>
+<span class="w">      </span><span class="n">noteDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">wholenote</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">divider</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">divider</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// dotted notes are represented with negative durations!!</span>
+<span class="w">      </span><span class="n">noteDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">wholenote</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">divider</span><span class="p">);</span>
+<span class="w">      </span><span class="n">noteDuration</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// increases the duration in half for dotted notes</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// we only play the note for 90% of the duration, leaving 10% as a pause</span>
+<span class="w">    </span><span class="nf">tone</span><span class="p">(</span><span class="n">buzzer</span><span class="p">,</span><span class="w"> </span><span class="n">melody</span><span class="p">[</span><span class="n">thisNote</span><span class="p">],</span><span class="w"> </span><span class="n">noteDuration</span><span class="o">*</span><span class="mf">0.9</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Wait for the specief duration before playing the next note.</span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="n">noteDuration</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// stop the waveform generation before the next note.</span>
+<span class="w">    </span><span class="nf">noTone</span><span class="p">(</span><span class="n">buzzer</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">//VARIATIONS - change random 5 notes in the melody</span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">randomNotesToBeAdded</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">//making sure we&#39;re not selecting the length duration numbers in melody (eg. -4, 4, 8)</span>
+
+<span class="w">    </span><span class="n">randNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;randNumber: &quot;</span><span class="p">);</span>
+<span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">randNumber</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">randNumber</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">randNumber</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">randomNotesToBeAdded</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">melody</span><span class="w"> </span><span class="p">[</span><span class="n">randNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//randomSeed(analogRead(A12));</span>
+<span class="w">    </span><span class="kr">long</span><span class="w"> </span><span class="n">randomLocationInMelody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">random</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;randomLocationInMelody: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">randomLocationInMelody</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//delay(1000);</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomLocationInMelody</span><span class="o">%</span><span class="mi">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">randomLocationInMelody</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kr">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomLocationInMelody</span><span class="p">;</span><span class="w"> </span>
+<span class="w">        </span><span class="n">melody</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomNotesToBeAdded</span><span class="w"> </span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>The code is based on an existing project on github that plays famous melodies on a buzzer through an Arduino. What we added was a generative element, where, based on a pseudorandom number, the program modifies the melody, choosing among the notes present in the melody and replacing notes in the current melody by those notes. This has a recursive character, because the melody modified and chosen from is - at each run of the main loop - the one that came out of the previous run (if there is one). </p>
+<p>One small detail that I found interesting is that someone on the internet recommended to use the input of a pin that is not connected to anything to generate &lsquo;random&rsquo; noise. (and that&rsquo;s what we did). </p>
+<p>This activity reminded me how fun it can be to write code, especially when the quality is not that important. The code is not very well written or documented, and it would have been more elegant to write it in a way which is more adaptable for different purposes. In the coming weeks I hope to experience the joy of writing slightly more thought through code as well.</p>
+<h2 id="criss-crossing-croissant-curves-day-2">criss-crossing croissant curves - day 2<a class="headerlink" href="#criss-crossing-croissant-curves-day-2" title="Permanent link">&para;</a></h2>
+<p>This session gave me a better understanding of computer assisted design and manufacturing. It was interesting to learn about the different tools -digital as well as physical - used in such processes. </p>
+<p>What stuck with me the most were the advantages of parametric design (somewhat known to me before), simulation, topological optimisation (knew very little about it) and generative design (knew even less). It&rsquo;s exciting to think about the potential (and current apploications) of these techniques for distributed design and local mass customisation. On a more personal note, the prospect of &lsquo;outsourcing&rsquo; some of the engineering grunt work to a machine is very appealing. It makes designing something truly adapted to its environment seem much more feasible and less tedious than what I would have imagined. The complex and &lsquo;organic-ish&rsquo; aesthetics of many (semi-autoomatically) topologically optimised and partly AI-generated design is also interesting. Modernist minimalism has it&rsquo;s charm, but I&rsquo;m starting to get bored of it (especially in its derivative / low effort forms).</p>
+<p>As an initial, playful exploration of parametric design, we were asked to parametrise a croissant. Here is my attempt:</p>
+<p><img alt="image: parametrising the croissant" src="../../assets/images/paramCroiss.jpg" /></p>
+<p>A further task was designing something using generative patterns.</p>
+<p>Since I did this task after doing the day 3 task (see next section), I decided to try out a generative design approach to see if it could same some material while preserving functionality. This was the first time I used Fusion360, and the first time I engaged in a generative design exploration. I made a number of mistakes, some of which I probably haven&rsquo;t even noticed. I would like to learn more about this topic.</p>
+<p>Here is the simple load case I imagined for this study:
+<img alt="image: generative study setup" src="../../assets/images/gS_scenario.png" /></p>
+<p>Here are some of the outcomes:
+<img alt="image: outcomes 1" src="../../assets/images/gS_outcomes1.png" />
+<img alt="image: outcomes 2" src="../../assets/images/gS_outcomes2.png" />
+<img alt="image: outcomes 3" src="../../assets/images/gS_outcomes3.png" /></p>
+<p>One of the mistakes I may have made is not making sure that the three parts of the part are connected. Perhaps this is due to the optimistically low loads I used, due to choosing slightly unrealistic materials (in a bit of a rush, I didn&rsquo;t figure out how to add/find, e.g. PLA). Perhaps there is an option to force them to connect. Perhaps them not being connnected is not an issue. I don&rsquo;t really know, but I will try to find out (by asking someone, googleing and by trying things out).</p>
+<p>The following final design (for now), which I will try to print may give me some insight on how to proceed. Abstract things are always easier to imagine once they have an instantiation in physical reality&hellip;</p>
+<p><img alt="image: outcomes " src="../../assets/images/gS_outcomes4_final.png" /></p>
+<h2 id="laser-focused-day-3">laser focused - day 3<a class="headerlink" href="#laser-focused-day-3" title="Permanent link">&para;</a></h2>
+<p>This session built on the previous one, focusing on 2D modeling for CAM and the various ways in which 2D cutouts and other artefacts based on 2D designs can be leveraged to create 3D designs. I was especially struck by the aesthetics and functionality of &lsquo;living hinges&rsquo;. ]</p>
+<p>We also learned about how the 2D machines in the FabLab work in practice. A side point I found interesting was anout the control the mannufacturer had over the &lsquo;hobbyist&rsquo; vinyl cutter (they are able to make it completely unusable at a distance) - an example of the lack of control some contemporary devices (or rather, the companies selling them) push to the extreme. I&rsquo;m looking forward to making stickers and silk printing frames with it anyway.</p>
+<p>Originally I had been interested in using the laser cutters to cut through the flattened metal of aluminium cans. Using such an abundant waste material, which is also light, sturdy and aesthetically appealing seemed interesting. As part of one of my &lsquo;interventions&rsquo;, I&rsquo;m looking to design light tubes (to transport sunlight from a window (or roof) to the interior of a dwelling). </p>
+<p>Unfortunately, this may turn out to be more difficult than I thought. I will try to figure it out. But for now, I decided to try approaching the same challenge with cardboard. We were assigned the task of creating a design using interlocking elements. This fits my idea pretty well. </p>
+<p>My first concrete exploration in this direction was making laser cut circles out of cardboard.</p>
+<p><img alt="image: laser cut can circles" src="../../assets/images/canCircles.jpg" /></p>
+<p>The idea is to use these cardboard circles to hold cans together like sections of a tube.</p>
+<p><img alt="image: the idea" src="../../assets/images/esTube.jpg" /></p>
+<p>As I prototyped, I soon realised an important feature of cans that I had overlooked before: the thin ring that goes around the top. This meant that I couldn&rsquo;t use the two rings as initially planned. However, the ring is very useful because it helps hold a joining element at the top. So, I modified my design to make something like this:</p>
+<p><img alt="image: the new design, in progress" src="../../assets/images/canNew1.jpg" /></p>
+<p>It took a while to get the diameter right (adjusting for the tolerance of the laser cutter, the material&rsquo;s (cardboard) flexibility, etc. It was a bit tedious but somehow fun (and good to understand how involved such a seemingly extremely simple process can take - at least if you&rsquo;re a beginner).</p>
+<p><img alt="image: the new design, in progress" src="../../assets/images/canNew2.jpg" /></p>
+<p>The final outcome (for now), looks like this:</p>
+<p><img alt="image: currently final can joining prototype" src="../../assets/images/canNew3.jpg" /></p>
+<p><img alt="image: view of the final design from the top" src="../../assets/images/canNew4.jpg" /></p>
+<p>I&rsquo;m planning on exploring this concept further, using different materials (e.g. wood) to make something more sturdy, and - if separate explorations on light refraction look promising - see if I can make the can tube water-tight. </p>
+<h2 id="bedding-for-your-bidding-day-4">bedding for your bidding - day 4<a class="headerlink" href="#bedding-for-your-bidding-day-4" title="Permanent link">&para;</a></h2>
+<p>Unfortunately, I was unable to attend this class, even though the subject really interests me. </p>
+<p>I tried the assigned exploration for this together with my roommate (Myrto). The deliberately incomplete instructions on the <a href="https://fablabbcn-projects.gitlab.io/learning/educational-docs/mdef/classes/inputsoutputs/">course documentation</a> were helpful, but left us with some challenges to figure out ourselves. </p>
+<p>We borrowed a friend and fellow student&rsquo;s (thanks Stella) ESP32 and got to work. First, we connected the LED and light sensor circuits according to the diagrams. After some fiddling, they worked.</p>
+<p>Then, remixing the available code, we tried to make a telegraph style communication system work. This worked up to a point. The button and the light sensor worked. With no knowledge of how others did this in class, we tried to discover how detecting the length of a light impulse could work. We thought that the following code would be good (it includes some commented out stuff we no longer need). The font will be fixed at some point, so you can copy and use it directly (reading should be ok?)</p>
+<div class="highlight"><pre><span></span><code>int R2 = 10000;
+float VIN = 3.0;
+
+unsigned long startTime = 0;
+unsigned long endTime = 0;
+unsigned long interval = 0;
+
+int ledState = 0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+
+
+void loop() {
+
+  // read the input on analog pin 0:
+  int sensorValue = analogRead(A3);
+
+  if (sensorValue&gt;1000)
+  { 
+    Serial.println(&quot;turn off the lights!&quot;);
+    delay(1000);
+  }
+
+  else
+  { 
+    Serial.println(&quot;lights off, checking for LED...&quot;); 
+    if (sensorValue &gt; 100 &amp;&amp; ledState == 0) //if the led turns on
+      { 
+      ledState = 1;  
+      Serial.println(&quot;the led turned on, I think!&quot;);
+      startTime = millis();
+      Serial.println(&quot;start time:&quot;);
+      Serial.println(startTime);
+
+        if (sensorValue &lt; 100)
+         { 
+          endTime = millis ();
+          Serial.println(&quot;end time: &quot;);
+           Serial.println(endTime);
+          interval = endTime - startTime;
+          Serial.println(&quot;interval: &quot;);
+          Serial.println(interval);
+
+          Serial.println(&quot;The LED is back off, I think!&quot;);
+          ledState = 0;
+          delay(1000);
+
+          if (interval &lt; 1000)
+            { 
+              Serial.println(&quot;SHORT&quot;); 
+              delay (1000); 
+              interval = 0;      
+              }
+
+          else 
+          { 
+          Serial.println(&quot;LONG&quot;); 
+          delay (1000);   
+          interval = 0;
+          }
+
+      }
+
+  }
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  //float voltage = sensorValue * (3.0 / 1023.0);
+
+  // Get the value of R1
+  //int ldr = ((R2 * VIN) / voltage) - R2;
+
+  // print out the value you read:
+  //Serial.println(sensorValue);
+  //Serial.print(&quot;voltage: &quot;);
+  //Serial.println(voltage);
+  //Serial.print(&quot;LDR value: &quot;);
+  //Serial.println(ldr);
+  }
+}
+</code></pre></div>
+<p>Unfortunately, this did not quite work. Part of the reason may be that the ligth sensor is subject to noise. We tried to implement a process where the user is prompted to turn off the lights when the sensor is sensing too much light. However, this sometimes got triggered when the LED got too close. It&rsquo;s also likely that the code has some further issues, to be fixed on a rainy Sunday. </p>
+<h2 id="first-challenge-sens_hort-water-sensing-for-urban-horticulture">first challenge - sens_hort, water sensing for urban horticulture<a class="headerlink" href="#first-challenge-sens_hort-water-sensing-for-urban-horticulture" title="Permanent link">&para;</a></h2>
+<p><img alt="image: the water sensing tube we designed and made" src="../../assets/images/waterSensing.jpg" />
+<em>Our final prototype for this challenge</em></p>
+<p>I wrote most of what I have to say about this in the collective document of my group (<a href="https://github.com/ramiroarga/WATER">sens_hort</a>). But here are some of my more personal thoughts.</p>
+<p>Personally, I really appreciated using some of the Fab Lab machines for the first time. I had used a laser cutter before, but not one of this size. It turned out to be quite intuitive, once I got used to it. I found myself wishing I could continue cutting out things all day/night, and try them out. It was like debugging for physical things - better suited to my sensibilities than the discipline necessary for manual work of a similar precision.</p>
+<p>The group I was a part of for this challenge was comparatively large  (four people). After deciding the general design together, we split up in two groups of two, Cagsun and Ramiro focusing on the electronics, Josephine and me focusing on the enclosure / non-electronic physical design parts. Having some experience with writing code (though not so much in writing it for Arduino), and almost none in product design / laser cutter based making, I decided to be part of the latter effort so as to explore what I know least.</p>
+<p>The sandwich approach we used to design a tap for a water-tight tube (layering three acrylic cutouts and adding a rubber ring to make a tap) was interesting to me. Using a laser cutter and designing in 2D seemed rather intuitive to me, so I was happy to discover some of the 3D applications of that. </p>
+<p>I also gained a renewed appreciation for how involved it is to design any kind of object from scratch. Making the water sensing tube seemed like it would take less time than it did. As we went through the process of designing and making it, I felt some things accelerate. Personally, I get the feeling that it will be faster next time. Even though - at times - it was a bit discouraging to be reminded of how complicated manufacturing can be (as someone who would like to eventually transcend at least a significant amount of dependence on mass industrial production), I appreciated gaining more of a grasp on these topics. I also believe that we are beginning to see alternatives to centrally controlled extractive industry emerge, and I am hopeful that more mass customisation, decentralisation of control, distribution of production, etc is yet to come. Hopefully I can contribute to that in some way.</p>
+<p>Please refer to the collective document for further reflections (I put most of them there).</p>
+<h2 id="all-rise-for-the-3dp-national-anthem-day-5">All rise for the 3DP national anthem- day 5<a class="headerlink" href="#all-rise-for-the-3dp-national-anthem-day-5" title="Permanent link">&para;</a></h2>
+<p>This overview of various 3D printing and scanning techniques reinforced my fascination with the technique and clarified a few things for me. It confirmed some of the limitations of nice-sounding filaments (like &lsquo;wood&rsquo; filament, that&rsquo;s mostly plastic, or the relatively difficult process necessary to make anything out of metal with 3DP-based tecchniques). When I first heard about the technology as a easily enthused teenager lurking on the RepRap website without ever ending up building one myself, I had naive ideas about which kinds of materials would soon end up being printable. This session both confirmed my slightly disillusioned perspective (at least for distributed production at an affordable price) I had before taking part in it, but adding more nuance and some exciting perspectives on future prospects as well.</p>
+<p>Some techniques, like Laminated Object Manufacturing, I had never heard about. Others, such as powder bed based methods, I had heard only very little. I&rsquo;m planning on reading about these. I&rsquo;m also eager to engage in the practical part of this (scanning and printing something), ideally trying a technique I did not engage with before. </p>
+<p>&hellip;My first results looked like this. It is the outcome of an initial small-scale print of three different objects. (at a scale around 1:10, to test if there are any obvious issues with the prints).</p>
+<p><img alt="image: the three objects" src="../../assets/images/3printedObjs.jpg" /></p>
+<p>The first is a dildo, generated with <a href="http://www.dildo-generator.com/">this</a> online tool, and slightly modified to be able to use it as an interchangeable module in a project that I may integrate as part of my MDEF interventions (tbd soon). Obviously, this would need to be used as a positive for a mold in order to be usable. In general sexuality, sex positivity, desire, etc are areas of research that seem fruitful and which I will likely explore further in the coming months. In terms of how the model came to be, the (potential and actual) time and effort &lsquo;efficiencies&rsquo; on a societal level of parametric design that is open-sourced seem obvious, and the aesthetic of slight complexity (more organic shapes,&hellip;) that almost naturally appear when using many of these tools is appealing to me; Modifying it in Rhino to add the nook was a good exercise, and easy enough.</p>
+<p><img alt="image: 3D printed dildo prototype" src="../../assets/images/3dPrintedDildo.jpg" /></p>
+<p>The second is a very simple initial prototype for a humidity collector inspired by the (partly real and partly imagined) use of air vents in various communities. I want to use it in an exploration of humidity collection in my bathroom. </p>
+<p><img alt="image: the funnel" src="../../assets/images/3dPrintedFunnel.jpg" /></p>
+<p>The last one - which is the generative design outcome from was the least successful, because it was a bit hard to remove the supports due to the thin layers making up the connection between the three elements. In this picture, they are not removed yet.</p>
+<p><img alt="image: the can holder" src="../../assets/images/3DPrintedCanHolder.jpg" /></p>
+<p>Another thing I printed is a bottle connector to be used in a simple and small hydroponics system. This one I downloaded from <a href="https://www.3dponics.com/wiki/download-parts-3dponics-mini/">3Dponics</a>. The print is not perfect, and I have not tested it yet because I ran into the somewhat amusing problem of not having plastic bottles to upcycle at home because I only buy cans and glass bottles. This is what the connecting part looks like:</p>
+<p><img alt="image: the bottle connector for hydroponics" src="../../assets/images/hydroponix.jpg" /></p>
+<p>I also had a friend 3D scan my torso (holding a knife because it seemed to fit the somewhat creepy features of scan made with a relatively low resolution scanner like my phone). These are screenshots of the scans:</p>
+<p><img alt="image: scan of me 1" src="../../assets/images/3dScan1.jpg" /></p>
+<p><img alt="image: scan of me 2" src="../../assets/images/3dScan2.jpg" /></p>
+<p>These require some assembly before they could be printed. </p>
+<h2 id="networking-entirely-unlike-having-drinks-with-your-more-successful-cousin-day-6">networking entirely unlike having drinks with your more successful cousin - day 6<a class="headerlink" href="#networking-entirely-unlike-having-drinks-with-your-more-successful-cousin-day-6" title="Permanent link">&para;</a></h2>
+<p>In this session on networks in general and Arduino networking we discussed a number of interesting cultural dynamics the ubiquity of the Internet has brought us. One aspect I found especially interesting is the tension between a homogenising tendency (observed by Victor) and the splintering into a myriad of microcultures - the infamous bubbles and echo chambers, but also many wonderfully wierd online communities and cultures - the shifting of much of human interaction into the digital has brought us.  </p>
+<p>I also thought the point on networked communication boiling down to copying was helpful to understand what is really going on (and not get lost in metaphorical marketing talk like that about &lsquo;the cloud&rsquo;). </p>
+<p>Another thing I want to explore more are the &lsquo;small internets&rsquo;, like <a href="https://gemini.circumlunar.space/">Project Gemini</a>. Though I have not experienced the early internet myself, the vibe of the early days still permeated some of the web as I learned to love it in the 00&rsquo;s. Along with the wierder corners of &lsquo;web3&rsquo;, and the maturing of alternative social platforms like Matrix, Mastodon, Secure Scuttlebutt, etc, there is a kind of hope to be found in the awareness that such alternatives are continuously being built in the shell of the old. Projects like Gemini are new to me, so I&rsquo;m looking forward to exploring them. </p>
+<p>We also played with the ESP32 Feathers, and divided into groups which tried to communicate with one another through a Arduino-based network routed through Victor&rsquo;s laptop. Almost everything worked for the groups, though ours had a particular technical difficulty. At the very end, it was working, but there was no time to test all use cases (the lesson was over).</p>
+<p>The way it worked was through a MQTT broker on Victor&rsquo;s laptop. All participants had ESP32&rsquo;s that connected to that broker. The protocol, which I didn&rsquo;t know seemed relatively easy to use, given it&rsquo;s simple way of functioning, at least in a basic mode. The concept of topics to publish and subscribe - though it may seem convoluted when applied to 1-1 communication - makes a lot of sense in a many-to-one and especially many-to-many use case. Setting up a MQTT client on the Feathers was also quite easy. We followed the steps described <a href="https://hackmd.io/Bl2DDqo6SrOX7SQMwyMbLA?view#Let%E2%80%99s-copy-something">here</a>. As is often the case when exploring a somewhat unfamiliar computation-based area, most of the difficulty seems to be in details about configurations, semicolons, etc - the main frustration in an otherwise rewarding exploration. </p>
+<h2 id="make-with-the-lights-on-day-7">make with the lights on - day 7<a class="headerlink" href="#make-with-the-lights-on-day-7" title="Permanent link">&para;</a></h2>
+<p>This session had a satisfying structure, starting from a simple LED circuit, to which we added step by step throughout the session to make it more complex (using more libraries, tools, etc).</p>
+<p>The general programming aspects of it were familiar to me, the Arduino-specific details not so much. I was able to help others at my table make the code work. Initially we tried to add every feature of the pedagogic sequence ourselves into the original code. This turned out to be more or less impossible after the second or third &lsquo;level&rsquo;. Instead, like everyone, we ended up copy-pasting the recommended code (<a href="https://hackmd.io/95FEOJXeSXe9hDu289X-bw?view#Hands-on">found on the course docs</a>) and modifying it slightly.</p>
+<p>The final stage was about using the MQTT protocol (like we did in an earlier session) to have synchronous LED animations based on choices in a dashboard all could access. This worked, and was fun. To see what it looks like, refer to other student&rsquo;s websites (what I filmed ended up a bit blurry). </p>
+<p>It was fun to take part in this session, and all the steps we went through together ended up working at our table. It strengthened my desire to get back into writing code, and to explore Arduino-based projects specifically. However, I do not have much to say about the details of the process itself. We successfully followed the steps described in the documentation of the course. Please refer to that documentation (linked above) if you wish to reproduce such an exploration. </p>
+<h2 id="collets-not-bullets-day-8">collets not bullets - day 8<a class="headerlink" href="#collets-not-bullets-day-8" title="Permanent link">&para;</a></h2>
+<p>This session was especially interesting to me because I had previously had no intimate contact with the topic of CNC mills. So the technical overview was both inspiring and slightly intimidating. Seeing the machine in action, however, made me really want to design for it, and make something with it&rsquo;s help. </p>
+<p>Bits of information in this session that stood out to me:</p>
+<ul>
+<li>
+<p>robot arms in industrial manufacturing tend to work like workers in the early stages of industrialsation - repeating the same task over and over again. The story about the robot arm in the FabLab, which works well until it gets into the particular motion it used to perform in it&rsquo;s previous life in an industrial setting left me wondering (somehwat naively, perhaps) if a rotation of tasks among robots could extend their (industrial?) lifespans, or if there could not be a more simple way of performing the exact same task over and over again (designing a cheaper system that is only able to perform that task, or sets of tasks, but is easy to modify physically). Why use the equivalent of making a 3D printer print the same thing over and over again, instead of making a (metaphorical) adjustable mold? These thoughts may only reflect my lack of domain expertise, however.</p>
+</li>
+<li>
+<p>another thing I wondered about, and did not get a complete answer to in the course was the question of compounding errors. Is there a kind of production which has some space for error tolerance, but which would benefit from the machines making errors not making the same error, which compounds over time, but rather making randomised (and distinct) errors? If the machines were rotated through tasks (like imagined in the previous point), could this have an advantage in terms of absolute deviation from the intended design (because the errors can go in all directions, they nd up closer to the intended shape than if they continued along one particular direction)? Again, the question likely reflects a lack of understanding on my part. </p>
+</li>
+<li>
+<p>It was amusing to hear about all the jargon present in the field of CNCing (like in most others). Being part of a Master&rsquo;s that absolutely loves jargon, I am not in a position to judge. A lens akin to the sociology of academic disciplines could, however, potentially be fruitfully applied to this.</p>
+</li>
+<li>
+<p>there were a lot of very specific technical details, that I will only really remember  once I tried CNC milling out myself. For example, the fact that corners may be round due to the shape of the thing that is not called a bit because it&rsquo;s not in a manual drill (something which is relevant for press fit designs especially). The same goes for the details of how to give instructions to the machine given a particular curve delineating the design (cutting inside of it, outside of it, centered, &hellip;).</p>
+</li>
+<li>
+<p>I was glad to hear about open source tools that are available for designs that are CNC millable. Open Source feels like a testament to human potential like few other things that are distinctly contemporary. For example, Deepnest allows you to nest the things to be cut in a way which minimises material waste (one of the disadvantages of substractive manufacturing like CNC milling). The 50 digital joint collection also looked exciting. I will try some of those out for sure.</p>
+</li>
+</ul>
+<p>I will leave other technical details (which I learned and put in my personal notes) out of this reflection. They can be found in the course presentation itself. </p>
+<p>The CNC assignment (doing something with the CNC) will - in my case - happen as part of the upcoming challenge. The reason is that we may want to pool our assigned wood plank resources to make something together with a few other students.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyleft 2021 "knr-at-iaac" - GNU Free Documentation License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6df46069.min.js"></script>
+      
+    
+  </body>
+</html>
